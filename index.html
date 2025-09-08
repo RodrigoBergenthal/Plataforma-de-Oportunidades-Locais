@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Oportunidades Locais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Plataforma de Oportunidades Locais</h1>
+        <p>Conectando moradores, empregos e serviços na sua comunidade.</p>
+    </header>
+
+    <main>
+        <!-- Seção para postar uma nova oportunidade -->
+        <section class="post-section">
+            <h2>Compartilhe uma Oportunidade</h2>
+            <form id="postForm">
+                <label for="postType">Tipo:</label>
+                <select id="postType" required>
+                    <option value="">Selecione...</option>
+                    <option value="job">Vaga de Emprego</option>
+                    <option value="service">Serviço Oferecido</option>
+                    <option value="event">Evento/Curso</option>
+                </select>
+
+                <label for="postTitle">Título:</label>
+                <input type="text" id="postTitle" placeholder="Ex: Professor de Violão" required>
+
+                <label for="postDescription">Descrição:</label>
+                <textarea id="postDescription" placeholder="Descreva a oportunidade brevemente..." rows="4" required></textarea>
+
+                <label for="postContact">Contato:</label>
+                <input type="text" id="postContact" placeholder="Telefone ou Email">
+
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <!-- Seção para exibir as oportunidades -->
+        <section class="feed-section">
+            <h2>Oportunidades Recentes</h2>
+            <div id="opportunitiesFeed">
+                <!-- As oportunidades serão inseridas aqui pelo JavaScript -->
+                <p class="no-posts-message">Nenhuma oportunidade publicada ainda. Seja o primeiro a compartilhar!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Centro Social Cesmar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
