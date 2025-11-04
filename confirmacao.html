@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Oportunidades Locais</title>
+    <title>Confirmação - Plataforma de Oportunidades Locais</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
         <h1>Plataforma de Oportunidades Locais</h1>
-        <p>Busque sua grande oportunidade conosco</p>
-        <div class="auth-buttons">
-            <a href="cadastro.html" class="btn btn-primary">Cadastrar-se</a>
-            <a href="login.html" class="btn btn-secondary">Entrar</a>
-            <a href="plataforma.html" class="btn btn-skip">Ignorar Cadastro</a>
-        </div>
+        <p>Confirmação de Cadastro</p>
     </header>
 
     <main>
-        <section class="about-section">
-            <h2>Sobre a Plataforma</h2>
-            <p>A Plataforma de Oportunidades Locais foi criada com o objetivo de conectar moradores com vagas de emprego, serviços e eventos em suas comunidades locais.</p>
+        <section class="confirmation-section">
+            <h2>Verifique sua Conta</h2>
+            <p>Enviamos um código de confirmação para o seu e-mail e telefone. Digite o código abaixo para confirmar sua conta:</p>
             
-            <h3>Como Funciona</h3>
-            <p>Nossa plataforma permite que qualquer pessoa da comunidade publique oportunidades locais ou busque por elas. O foco é fortalecer a economia local e promover inclusão social.</p>
+            <form id="confirmationForm">
+                <label for="confirmationCode">Código de Confirmação:</label>
+                <input type="text" id="confirmationCode" name="confirmationCode" placeholder="Digite o código enviado" required>
+                
+                <button type="submit">Confirmar</button>
+            </form>
             
-            <h3>Sobre os Fundadores</h3>
-            <p>A plataforma foi desenvolvida em parceria com o Centro Social Cesmar, uma organização comprometida com o desenvolvimento social e econômico das comunidades locais.</p>
-        </section>
-
-        <!-- Seção para exibir as oportunidades -->
-        <section class="feed-section">
-            <h2>Oportunidades Recentes</h2>
-            <div id="opportunitiesFeed">
-                <!-- As oportunidades serão inseridas aqui pelo JavaScript -->
-                <p class="no-posts-message">Nenhuma oportunidade publicada ainda. Seja o primeiro a compartilhar!</p>
+            <div class="resend-code">
+                <p>Não recebeu o código? <a href="#" id="resendCode">Reenviar código</a></p>
             </div>
         </section>
     </main>

@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Oportunidades Locais</title>
+    <title>Login - Plataforma de Oportunidades Locais</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
         <h1>Plataforma de Oportunidades Locais</h1>
-        <p>Busque sua grande oportunidade conosco</p>
-        <div class="auth-buttons">
-            <a href="cadastro.html" class="btn btn-primary">Cadastrar-se</a>
-            <a href="login.html" class="btn btn-secondary">Entrar</a>
-            <a href="plataforma.html" class="btn btn-skip">Ignorar Cadastro</a>
-        </div>
+        <p>Área de Login</p>
     </header>
 
     <main>
-        <section class="about-section">
-            <h2>Sobre a Plataforma</h2>
-            <p>A Plataforma de Oportunidades Locais foi criada com o objetivo de conectar moradores com vagas de emprego, serviços e eventos em suas comunidades locais.</p>
-            
-            <h3>Como Funciona</h3>
-            <p>Nossa plataforma permite que qualquer pessoa da comunidade publique oportunidades locais ou busque por elas. O foco é fortalecer a economia local e promover inclusão social.</p>
-            
-            <h3>Sobre os Fundadores</h3>
-            <p>A plataforma foi desenvolvida em parceria com o Centro Social Cesmar, uma organização comprometida com o desenvolvimento social e econômico das comunidades locais.</p>
-        </section>
+        <section class="login-section">
+            <h2>Faça seu Login</h2>
+            <form id="loginForm">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-        <!-- Seção para exibir as oportunidades -->
-        <section class="feed-section">
-            <h2>Oportunidades Recentes</h2>
-            <div id="opportunitiesFeed">
-                <!-- As oportunidades serão inseridas aqui pelo JavaScript -->
-                <p class="no-posts-message">Nenhuma oportunidade publicada ainda. Seja o primeiro a compartilhar!</p>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+            
+            <div class="register-link">
+                <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
             </div>
         </section>
     </main>

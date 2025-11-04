@@ -9,25 +9,37 @@
 </head>
 <body>
     <header>
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
         <h1>Plataforma de Oportunidades Locais</h1>
-        <p>Busque sua grande oportunidade conosco</p>
-        <div class="auth-buttons">
-            <a href="cadastro.html" class="btn btn-primary">Cadastrar-se</a>
-            <a href="login.html" class="btn btn-secondary">Entrar</a>
-            <a href="plataforma.html" class="btn btn-skip">Ignorar Cadastro</a>
-        </div>
+        <p>Conectando moradores, empregos e serviços na sua comunidade.</p>
     </header>
 
     <main>
-        <section class="about-section">
-            <h2>Sobre a Plataforma</h2>
-            <p>A Plataforma de Oportunidades Locais foi criada com o objetivo de conectar moradores com vagas de emprego, serviços e eventos em suas comunidades locais.</p>
-            
-            <h3>Como Funciona</h3>
-            <p>Nossa plataforma permite que qualquer pessoa da comunidade publique oportunidades locais ou busque por elas. O foco é fortalecer a economia local e promover inclusão social.</p>
-            
-            <h3>Sobre os Fundadores</h3>
-            <p>A plataforma foi desenvolvida em parceria com o Centro Social Cesmar, uma organização comprometida com o desenvolvimento social e econômico das comunidades locais.</p>
+        <!-- Seção para postar uma nova oportunidade -->
+        <section class="post-section">
+            <h2>Compartilhe uma Oportunidade</h2>
+            <form id="postForm">
+                <label for="postType">Tipo:</label>
+                <select id="postType" required>
+                    <option value="">Selecione...</option>
+                    <option value="job">Vaga de Emprego</option>
+                    <option value="service">Serviço Oferecido</option>
+                    <option value="event">Evento/Curso</option>
+                </select>
+
+                <label for="postTitle">Título:</label>
+                <input type="text" id="postTitle" placeholder="Ex: Professor de Violão" required>
+
+                <label for="postDescription">Descrição:</label>
+                <textarea id="postDescription" placeholder="Descreva a oportunidade brevemente..." rows="4" required></textarea>
+
+                <label for="postContact">Contato:</label>
+                <input type="text" id="postContact" placeholder="Telefone ou Email">
+
+                <button type="submit">Publicar</button>
+            </form>
         </section>
 
         <!-- Seção para exibir as oportunidades -->
